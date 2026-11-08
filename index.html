@@ -1,1 +1,61 @@
 
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DPT Trojanovice – Live GPS</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#eef1f4;color:#202a35;font-family:Arial,sans-serif}
+header{height:64px;background:#172536;color:white;display:flex;align-items:center;padding:0 22px;gap:14px}
+.logo{font-size:23px;font-weight:bold;color:#54b9ff}
+header small{color:#b9c8d7}
+main{padding:18px;max-width:1400px;margin:auto}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+h2{margin:8px 0}
+.status{font-size:13px;color:#188451}
+.map{height:650px;position:relative;overflow:hidden;border-radius:13px;background:#dce5df;border:1px solid #c5d0ca;margin-top:16px}
+.map:before{content:"";position:absolute;inset:0;background-image:linear-gradient(35deg,transparent 48%,#fff 49%,#fff 51%,transparent 52%),linear-gradient(125deg,transparent 48%,#fff 49%,#fff 51%,transparent 52%);background-size:260px 220px}
+.road{position:absolute;background:#fff;border:1px solid #cbd2d0;border-radius:30px}
+.r1{width:120%;height:42px;top:48%;left:-10%;transform:rotate(-12deg)}
+.r2{width:45px;height:120%;left:47%;top:-10%;transform:rotate(18deg)}
+.r3{width:70%;height:35px;top:20%;left:20%;transform:rotate(24deg)}
+.place{position:absolute;background:#c5d7c4;border-radius:8px;opacity:.8}
+.p1{width:130px;height:90px;left:12%;top:18%}
+.p2{width:170px;height:110px;right:12%;top:65%}
+.p3{width:100px;height:130px;left:15%;bottom:10%}
+.label{position:absolute;font-size:12px;color:#596a60;font-weight:bold}
+.bus{position:absolute;transform:translate(-50%,-50%);background:#1268a8;color:white;padding:8px 11px;border-radius:8px;font-size:12px;font-weight:bold;box-shadow:0 3px 10px #0004;white-space:nowrap}
+.bus:before{content:"🚌 ";font-size:15px}
+.panel{background:white;border:1px solid #dce2e7;border-radius:12px;padding:16px;margin-top:16px}
+.muted{color:#73808b;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">DPT</div>
+<div><b>DOPRAVNÍ PODNIK TROJANOVICE</b><br><small>LIVE GPS SLEDOVÁNÍ VOZIDEL</small></div>
+</header>
+<main>
+<div class="top">
+<div><h2>Mapa provozu</h2><div class="muted">Přehled vozidel dopravního podniku</div></div>
+<div class="status">● Systém připraven</div>
+</div>
+<div class="map">
+<div class="road r1"></div><div class="road r2"></div><div class="road r3"></div>
+<div class="place p1"></div><div class="place p2"></div><div class="place p3"></div>
+<div class="label" style="left:14%;top:15%">CENTRUM</div>
+<div class="label" style="right:13%;bottom:20%">AUTOBUSOVÉ NÁDRAŽÍ</div>
+<div class="label" style="left:14%;bottom:8%">MĚSTSKÁ ČÁST</div>
+<div class="bus" style="left:40%;top:43%">Linka 1</div>
+<div class="bus" style="left:63%;top:58%">Linka 2</div>
+</div>
+<div class="panel">
+<b>Vozidla v provozu</b>
+<p class="muted">Zatím ukázková vozidla. Skutečné GPS polohy připojíme v dalším kroku pomocí Roblox serveru a API.</p>
+</div>
+</main>
+</body>
+</html>
+
